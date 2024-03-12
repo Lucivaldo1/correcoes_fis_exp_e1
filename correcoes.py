@@ -165,32 +165,22 @@ def atividade2():
 def atividade3():
     '''
     --------- Gabarito da terceira atividade ---------
-
-    questões p/ casa:
-
-    0]
-
-    t.d.p.: 1587.2 \pm 116.46252616185174
-
-    t.d.m.: 6.845528455284553 \pm 0.5859607376561571
-
-    t.d.m.: 0.503655E+02 \pm 0,756
     
     1]
-        a) t.d.p = 0.32469E+02 \pm 0.10757E+01
-            t.d.m = 0.32469E+02 \pm 0.15145E+01
+        a) t.d.p = 32,5 \pm 1,1
+            t.d.m = 32,5 \pm 1,5
 
-        b) t.d.p = 0.444825E+02 \pm 0.161053E+01
-            t.d.m = 0.444825E+02 \pm 0.272424E+01
+        b) t.d.p = 44,5 \pm 1,6
+            t.d.m = 44,5 \pm 2,7
     2]
-        a)  t.d.p.: S = 0.36700E+02 \pm 0.25099E+01
-            t.d.m.: S = 0.36700E+02 \pm 0.34000E+01
+        a)  t.d.p.: S = 36,7 \pm 2,5
+            t.d.m.: S = 36,7 \pm 3,4
         
-        b) t.d.p.: D = 0.1087E+03 \pm 0.94831E+01
-           t.d.m.: D = 0.1087E+03 \pm 0.1150E+02
+        b) t.d.p.: D = 109 \pm 9
+           t.d.m.: D = 109 \pm 12
     3]
-        t.d.p.: S = 0.1384E+02 \pm 0.1675E+01
-        t.d.m.: S = 0.1384E+02 \pm 0.2132E+01
+        t.d.p.: S = 13,8 \pm 1,7
+        t.d.m.: S = 13,8 \pm 2,1
     4]
         t.d.m.: V = 7.9 \pm 0.8
 
@@ -198,8 +188,7 @@ def atividade3():
         I = (61281 + 0,6 * 10^3) gcm^2
 
     '''
-    q0 = int(input('Digite o número de erros da questão zero: '))
-
+    
     q1 = int(input('Digite o número de erros da primeira questão: '))
 
     q2 = int(input('Digite o número de erros da segunda questão: '))
@@ -210,14 +199,14 @@ def atividade3():
 
     q5 = int(input('Digite o número de erros da quinta questão: '))
 
-    return 10 - (q0*0.55 + q1*((5/3)/2) + q2*((5/3)/2) + q3*((5/3)/2) + q4*(5/3) + q5*(5/3))
+    return 10 - ((q1*0.25) + q2*(0.25) + q3*(0.5) + q4*(2) + q5*(1))
    
 def medidas_De_Tempo():
     g = 9.81
 
-    tabela_IA = [10.5, 11, 15, 12.5, 13.5, 16, 15.5]
+    tabela_IA = []
 
-    tabela_IIA = [11.07, 11.02, 11.18, 11.30, 11.12, 11.16]
+    tabela_IIA = []
 
     tempos = []
 
@@ -230,17 +219,17 @@ def medidas_De_Tempo():
 
 def medidas_De_Comprimento():
     
-    tabelaI = [4.3]
+    tabelaI = [4.3,2.2,3.4] #p/ unidade U 
      #C L H
-    tabelaI_desvios = [0.05]
+    tabelaI_desvios = [0.05, 0.05,0.05]
 
-    #cálculo do perimetro e da area da maior face do movel
-    tabelaII =[57.04,31.33, 46.91] #C L H
     
-    tabelaII_desvios = [0.04, 0.04, 0.04]
-    #perimetro soma 2 * (C + H)
+    tabelaII =[] #C L H
+    
+    tabelaII_desvios = []
+    
 
-    tabelaIII = [23.57, 23.34, 23.06, 23.15, 23.51, 22.98]
+    tabelaIII = [] #Tabela V 
 
 
     print('Perímetro: ')
@@ -262,13 +251,17 @@ def medidas_De_Comprimento():
 
 def main():
 
+    #medidas_De_Tempo()
+
+    #medidas_De_Comprimento()
+    '''
     continuar = 'y'
     while continuar == 'y' or continuar == 'Y':
 
         print(atividade2())
         continuar = input('continuar?(y/n): ')
         os.system('cls')
-    
+    '''
     
    
 if __name__ == '__main__':
